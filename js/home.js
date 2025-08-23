@@ -1,8 +1,13 @@
 // function to get input value...(reusability-function)
 function getInputValueNumber(id) {
   const inputValueNumber = parseInt(document.getElementById(id).value);
-
   return inputValueNumber;
+}
+
+// function get input value return...(reusability-function)
+function getInputValue(value) {
+  const inputValue = document.getElementById(value).value;
+  return inputValue;
 }
 
 // addMoney section js
@@ -11,8 +16,8 @@ document
   .addEventListener("click", function (e) {
     e.preventDefault();
 
-    const selectBank = document.getElementById("select-bank").value;
-    const bankAcc = document.getElementById("bank-acc").value;
+    const selectBank = getInputValue("select-bank");
+    const bankAcc = getInputValue("bank-acc");
     const addMoney = getInputValueNumber("add-money");
     const inputPin = document.getElementById("input-pin").value;
     const availableBalance = parseInt(
