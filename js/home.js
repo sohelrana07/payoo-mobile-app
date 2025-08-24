@@ -40,6 +40,11 @@ function toggleBtnBorder(id) {
     .classList.add("border-[#0874f2]", "bg-[#0874f20d]");
 }
 
+// Log out section handler
+document.getElementById("log-out").addEventListener("click", function () {
+  window.location.href = "./index.html";
+});
+
 // addMoney section js
 document
   .getElementById("btn-add-money")
