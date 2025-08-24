@@ -76,7 +76,7 @@
         <!-- card-1  -->
         <div
           id="addMoney-btn"
-          class="box-Color border-1 border-gray-200 rounded-xl text-center flex justify-center items-center py-5 px-2 shadow-sm shadow-[#0808081a]"
+          class="box-Color border-1 border-gray-200 rounded-xl text-center flex justify-center items-center py-5 px-3 shadow-sm shadow-[#0808081a]"
         >
           <div>
             <img src="assets/wallet1.png" class="mx-auto" alt="" />
@@ -87,7 +87,7 @@
         <!-- card-2 -->
         <div
           id="cashOut-btn"
-          class="box-Color border-1 border-gray-200 rounded-xl text-center flex justify-center items-center py-5 px-2 shadow-sm shadow-[#0808081a]"
+          class="box-Color border-1 border-gray-200 rounded-xl text-center flex justify-center items-center py-5 px-3 shadow-sm shadow-[#0808081a]"
         >
           <div>
             <img src="assets/send1.png" class="mx-auto" alt="" />
@@ -98,7 +98,7 @@
         <!-- card-3 -->
         <div
           id="transfer-btn"
-          class="box-Color border-1 border-gray-200 rounded-xl text-center flex justify-center items-center py-5 px-2 shadow-sm shadow-[#0808081a]"
+          class="box-Color border-1 border-gray-200 rounded-xl text-center flex justify-center items-center py-5 px-3 shadow-sm shadow-[#0808081a]"
         >
           <div>
             <img src="assets/money1.png" class="mx-auto" alt="" />
@@ -109,7 +109,7 @@
         <!-- card-4  -->
         <div
           id="get-bonus-btn"
-          class="box-Color border-1 border-gray-200 rounded-xl text-center flex justify-center items-center py-5 px-2 shadow-sm shadow-[#0808081a]"
+          class="box-Color border-1 border-gray-200 rounded-xl text-center flex justify-center items-center py-5 px-3 shadow-sm shadow-[#0808081a]"
         >
           <div>
             <img src="assets/bonus1.png" class="mx-auto" alt="" />
@@ -120,7 +120,7 @@
         <!-- card-5  -->
         <div
           id="pay-bill-btn"
-          class="box-Color border-1 border-gray-200 rounded-xl text-center flex justify-center items-center py-5 px-2 shadow-sm shadow-[#0808081a]"
+          class="box-Color border-1 border-gray-200 rounded-xl text-center flex justify-center items-center py-5 px-3 shadow-sm shadow-[#0808081a]"
         >
           <div>
             <img src="assets/purse1.png" class="mx-auto" alt="" />
@@ -130,7 +130,8 @@
 
         <!-- card-6  -->
         <div
-          class="box-Color border-1 border-gray-200 rounded-xl text-center flex justify-center items-center py-5 px-2 shadow-sm shadow-[#0808081a]"
+          id="transactions-btn"
+          class="box-Color border-1 border-gray-200 rounded-xl text-center flex justify-center items-center py-5 px-3 shadow-sm shadow-[#0808081a]"
         >
           <div>
             <img src="assets/transaction1.png" class="mx-auto" alt="" />
@@ -417,6 +418,101 @@
           Pay Now
         </button>
       </form>
+    </section>
+
+    <!-- input-06 Transaction form -->
+    <section
+      style="display: none"
+      id="transaction"
+      class="toggling max-w-lg mx-auto mt-8 px-4 pb-4"
+    >
+      <!-- title section here -->
+      <div class="flex justify-between items-center mb-4">
+        <h1 class="text-[#080808b3] font-semibold text-lg">
+          Transaction History
+        </h1>
+        <h3 class="text-[#08080880]">View All</h3>
+      </div>
+
+      <!-- card area card-1 -->
+      <div
+        class="border-1 border-[#0808081a] hover:scale-x-105 shadow-sm shadow-[#0808081A] flex justify-between items-center bg-white rounded-2xl py-4 px-5 mb-3"
+      >
+        <!-- left side  -->
+        <div class="flex items-center gap-3">
+          <figure class="bg-[#0808080d] p-2.5 rounded-full">
+            <img src="assets/purse1.png" alt="" />
+          </figure>
+          <div>
+            <h1 class="text-[#080808b3] font-semibold">Electricity Bill</h1>
+            <h3 class="text-[#080808b3] text-xs">Today 01:44 AM</h3>
+          </div>
+        </div>
+        <!-- right side -->
+        <div>
+          <span><i class="fa-solid fa-ellipsis-vertical text-xl"></i></span>
+        </div>
+      </div>
+
+      <!-- card-2 -->
+      <div
+        class="border-1 border-[#0808081a] hover:scale-x-105 shadow-sm shadow-[#0808081A] flex justify-between items-center bg-white rounded-2xl py-4 px-5 mb-3"
+      >
+        <!-- left side  -->
+        <div class="flex items-center gap-3">
+          <figure class="bg-[#0808080d] p-2.5 rounded-full">
+            <img src="assets/purse1.png" alt="" />
+          </figure>
+          <div>
+            <h1 class="text-[#080808b3] font-semibold">Bank Deposit</h1>
+            <h3 class="text-[#080808b3] text-xs">Today 01:44 AM</h3>
+          </div>
+        </div>
+        <!-- right side -->
+        <div>
+          <span><i class="fa-solid fa-ellipsis-vertical text-xl"></i></span>
+        </div>
+      </div>
+
+      <!-- card-3 -->
+      <div
+        class="border-1 border-[#0808081a] hover:scale-x-105 shadow-sm shadow-[#0808081A] flex justify-between items-center bg-white rounded-2xl py-4 px-5 mb-3"
+      >
+        <!-- left side  -->
+        <div class="flex items-center gap-3">
+          <figure class="bg-[#0808080d] p-2.5 rounded-full">
+            <img src="assets/purse1.png" alt="" />
+          </figure>
+          <div>
+            <h1 class="text-[#080808b3] font-semibold">Mobile Recharge</h1>
+            <h3 class="text-[#080808b3] text-xs">Today 01:44 AM</h3>
+          </div>
+        </div>
+        <!-- right side -->
+        <div>
+          <span><i class="fa-solid fa-ellipsis-vertical text-xl"></i></span>
+        </div>
+      </div>
+
+      <!-- card-4 -->
+      <div
+        class="border-1 border-[#0808081a] hover:scale-x-105 shadow-sm shadow-[#0808081A] flex justify-between items-center bg-white rounded-2xl py-4 px-5"
+      >
+        <!-- left side  -->
+        <div class="flex items-center gap-3">
+          <figure class="bg-[#0808080d] p-2.5 rounded-full">
+            <img src="assets/purse1.png" alt="" />
+          </figure>
+          <div>
+            <h1 class="text-[#080808b3] font-semibold">Gas Bill</h1>
+            <h3 class="text-[#080808b3] text-xs">Today 01:44 AM</h3>
+          </div>
+        </div>
+        <!-- right side -->
+        <div>
+          <span><i class="fa-solid fa-ellipsis-vertical text-xl"></i></span>
+        </div>
+      </div>
     </section>
 
     <script src="js/home.js"></script>

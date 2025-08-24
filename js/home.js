@@ -241,3 +241,11 @@ document.getElementById("pay-bill-btn").addEventListener("click", function () {
   toggLing("pay-bill");
   toggleBtnBorder("pay-bill-btn");
 });
+
+// step 06
+document
+  .getElementById("transactions-btn")
+  .addEventListener("click", function () {
+    toggLing("transaction");
+    toggleBtnBorder("transactions-btn");
+  });
