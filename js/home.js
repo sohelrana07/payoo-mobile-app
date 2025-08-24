@@ -10,6 +10,13 @@ function getInputValue(value) {
   return inputValue;
 }
 
+// function get input innerText return...(reusability-function)
+function setInnerText(value) {
+  const availableBalanceElement = document.getElementById("available-balance");
+  availableBalanceElement.innerText = value;
+  return availableBalanceElement;
+}
+
 // addMoney section js
 document
   .getElementById("btn-add-money")
@@ -28,7 +35,7 @@ document
       alert("Invalid account number!");
       return;
     }
-    if (addMoney < 100) {
+    if (isNaN(addMoney) || addMoney < 100) {
       alert("Invalid Amount!");
       return;
     }
@@ -38,8 +45,7 @@ document
     }
     if (inputPin == 2025) {
       const newAvailableBalance = availableBalance + addMoney;
-      document.getElementById("available-balance").innerText =
-        newAvailableBalance;
+      setInnerText(newAvailableBalance);
       document.getElementById("add-money").value = "";
       document.getElementById("input-pin").value = "";
       document.getElementById("bank-acc").value = "";
@@ -47,6 +53,40 @@ document
       alert("Invalid Pin!");
     }
   });
+
+// cashOut section js
+document.getElementById("btn-cash-out").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const agentNumber = getInputValue("agent-number");
+  const cashOut = getInputValueNumber("cashout-money");
+  const PinNumber = getInputValue("pin-number");
+  const availableBalance = parseInt(
+    document.getElementById("available-balance").innerText
+  );
+
+  if (agentNumber.length !== 11) {
+    alert("Invalid agent number!");
+    return;
+  }
+  if (isNaN(cashOut) || cashOut < 100) {
+    alert("Invalid Amount!");
+    return;
+  }
+  if (PinNumber.length !== 4) {
+    alert("Please provide 4 digit Pin!");
+    return;
+  }
+  if (PinNumber == 2025) {
+    const newAvailableBalance = availableBalance - cashOut;
+    setInnerText(newAvailableBalance);
+    document.getElementById("agent-number").value = "";
+    document.getElementById("cashout-money").value = "";
+    document.getElementById("pin-number").value = "";
+  } else {
+    alert("Invalid Pin!");
+  }
+});
 
 // Toggling feature section start here
 // step 01
