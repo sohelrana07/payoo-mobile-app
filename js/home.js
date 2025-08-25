@@ -1,3 +1,5 @@
+const transactionData = [];
+
 // function to get input value...(reusability-function)
 function getInputValueNumber(id) {
   const inputValueNumber = parseInt(document.getElementById(id).value);
@@ -77,6 +79,18 @@ document
       document.getElementById("add-money").value = "";
       document.getElementById("input-pin").value = "";
       document.getElementById("bank-acc").value = "";
+      // data store....
+      const data = {
+        name: "Add Money",
+        date: new Date().toLocaleTimeString("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+        }),
+      };
+
+      transactionData.push(data);
     } else {
       alert("Invalid Pin!");
     }
@@ -111,6 +125,18 @@ document.getElementById("btn-cash-out").addEventListener("click", function (e) {
     document.getElementById("agent-number").value = "";
     document.getElementById("cashout-money").value = "";
     document.getElementById("pin-number").value = "";
+    // data store....
+    const data = {
+      name: "Cash Out",
+      date: new Date().toLocaleTimeString("en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
+      }),
+    };
+
+    transactionData.push(data);
   } else {
     alert("Invalid Pin!");
   }
@@ -147,6 +173,18 @@ document
       document.getElementById("bank-account").value = "";
       document.getElementById("transfer-money").value = "";
       document.getElementById("transfer-Pin").value = "";
+      // data store....
+      const data = {
+        name: "Transfer Money",
+        date: new Date().toLocaleTimeString("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+        }),
+      };
+
+      transactionData.push(data);
     } else {
       alert("Invalid Pin!");
     }
@@ -175,6 +213,18 @@ document
     document.getElementById("available-balance").innerText =
       newAvailableBalance;
     document.getElementById("get-coupon-bonus").value = "";
+    // data store....
+    const data = {
+      name: "Bonus",
+      date: new Date().toLocaleTimeString("en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
+      }),
+    };
+
+    transactionData.push(data);
   });
 
 // payBill section js
@@ -206,10 +256,59 @@ document.getElementById("btn-pay-bill").addEventListener("click", function (e) {
     document.getElementById("Bank-acc").value = "";
     document.getElementById("pay-amount").value = "";
     document.getElementById("bill-pin").value = "";
+    // data store....
+    const data = {
+      name: "Pay Bill",
+      date: new Date().toLocaleTimeString("en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
+      }),
+    };
+
+    transactionData.push(data);
   } else {
     alert("Invalid Pin!");
   }
 });
+
+// transaction section js
+document
+  .getElementById("transactions-btn")
+  .addEventListener("click", function () {
+    const transactionContainer = document.getElementById(
+      "transaction-container"
+    );
+
+    transactionContainer.innerText = "";
+
+    for (const data of transactionData) {
+      const div = document.createElement("div");
+      div.innerHTML = `
+              <div
+          class="border border-[#fca6a61a] hover:scale-x-105 shadow-sm shadow-[#0808081A] flex justify-between items-center bg-white rounded-2xl py-4 px-5 mb-3"
+        >
+          <!-- left side  -->
+          <div class="flex items-center gap-3">
+            <figure class="bg-[#0808080d] p-2.5 rounded-full">
+              <img src="assets/purse1.png" alt="" />
+            </figure>
+            <div>
+              <h1 class="text-[#080808b3] font-semibold">${data.name}</h1>
+              <h3 class="text-[#080808b3] text-xs">${data.date}</h3>
+            </div>
+          </div>
+          <!-- right side -->
+          <span>
+            <i class="fa-solid fa-ellipsis-vertical text-xl"></i>
+          </span>
+        </div>
+      `;
+
+      transactionContainer.appendChild(div);
+    }
+  });
 
 // Toggling feature section start here
 // step 01
