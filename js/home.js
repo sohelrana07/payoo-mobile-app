@@ -65,7 +65,7 @@ document
       alert("Invalid account number!");
       return;
     }
-    if (isNaN(addMoney) || addMoney < 100) {
+    if (isNaN(addMoney) || addMoney <= 0) {
       alert("Invalid Amount!");
       return;
     }
@@ -111,7 +111,7 @@ document.getElementById("btn-cash-out").addEventListener("click", function (e) {
     alert("Invalid agent number!");
     return;
   }
-  if (isNaN(cashOut) || cashOut < 100) {
+  if (isNaN(cashOut) || cashOut <= 0 || cashOut >= 45000) {
     alert("Invalid Amount!");
     return;
   }
@@ -159,7 +159,7 @@ document
       alert("Invalid account number!");
       return;
     }
-    if (isNaN(transferMoney) || transferMoney < 100) {
+    if (isNaN(transferMoney) || transferMoney <= 0 || transferMoney >= 45000) {
       alert("Invalid Amount!");
       return;
     }
@@ -215,7 +215,7 @@ document
     document.getElementById("get-coupon-bonus").value = "";
     // data store....
     const data = {
-      name: "Bonus",
+      name: "Bonus Added",
       date: new Date().toLocaleTimeString("en-US", {
         hour: "2-digit",
         minute: "2-digit",
@@ -242,7 +242,7 @@ document.getElementById("btn-pay-bill").addEventListener("click", function (e) {
     alert("Invalid account number!");
     return;
   }
-  if (isNaN(payBill) || payBill < 100) {
+  if (isNaN(payBill) || payBill <= 0 || payBill >= 45000) {
     alert("Invalid Amount!");
     return;
   }
