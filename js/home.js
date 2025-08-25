@@ -111,7 +111,7 @@ document.getElementById("btn-cash-out").addEventListener("click", function (e) {
     alert("Invalid agent number!");
     return;
   }
-  if (isNaN(cashOut) || cashOut <= 0 || cashOut >= 45000) {
+  if (isNaN(cashOut) || cashOut <= 0 || cashOut >= availableBalance) {
     alert("Invalid Amount!");
     return;
   }
@@ -159,7 +159,11 @@ document
       alert("Invalid account number!");
       return;
     }
-    if (isNaN(transferMoney) || transferMoney <= 0 || transferMoney >= 45000) {
+    if (
+      isNaN(transferMoney) ||
+      transferMoney <= 0 ||
+      transferMoney >= availableBalance
+    ) {
       alert("Invalid Amount!");
       return;
     }
@@ -242,7 +246,7 @@ document.getElementById("btn-pay-bill").addEventListener("click", function (e) {
     alert("Invalid account number!");
     return;
   }
-  if (isNaN(payBill) || payBill <= 0 || payBill >= 45000) {
+  if (isNaN(payBill) || payBill <= 0 || payBill >= availableBalance) {
     alert("Invalid Amount!");
     return;
   }

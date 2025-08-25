@@ -31,7 +31,7 @@
     />
     <!-- font link  -->
   </head>
-  <body class="bg-[#f4f5f7] min-h-[100vh] font-[Outfit]">
+  <body class="bg-[#f4f5f7] min-h-[100vh] pb-2 font-[Outfit]">
     <!-- all equipment section -->
     <div class="max-w-lg mx-auto pb-5 bg-white rounded-b-xl">
       <!-- nav section start here -->
@@ -142,7 +142,11 @@
     </div>
 
     <!-- input-01 addMoney form -->
-    <section id="add-Money" class="toggling max-w-lg mx-auto mt-8 px-4">
+    <section
+      style="display: none"
+      id="add-Money"
+      class="toggling max-w-lg mx-auto mt-8 mb-3 px-4"
+    >
       <h1 class="text-[#080808b3] font-semibold text-lg mb-4">Add Money</h1>
 
       <!-- input area -->
@@ -215,7 +219,7 @@
     <section
       id="casH-out"
       style="display: none"
-      class="toggling max-w-lg mx-auto mt-8 px-4"
+      class="toggling max-w-lg mx-auto mt-8 mb-3 px-4"
     >
       <h1 class="text-[#080808b3] font-semibold text-lg mb-4">Cash Out</h1>
 
@@ -266,7 +270,7 @@
     <section
       style="display: none"
       id="transfer-Money"
-      class="toggling max-w-lg mx-auto mt-8 px-4"
+      class="toggling max-w-lg mx-auto mt-8 mb-3 px-4"
     >
       <h1 class="text-[#080808b3] font-semibold text-lg mb-4">
         Transfer Money
@@ -319,7 +323,7 @@
     <section
       style="display: none"
       id="get-bonus"
-      class="toggling max-w-lg mx-auto mt-8 px-4"
+      class="toggling max-w-lg mx-auto mt-8 mb-3 px-4"
     >
       <h1 class="text-[#080808b3] font-semibold text-lg mb-4">Get Bonus</h1>
 
@@ -348,7 +352,7 @@
     <section
       style="display: none"
       id="pay-bill"
-      class="toggling max-w-lg mx-auto mt-8 px-4"
+      class="toggling max-w-lg mx-auto mt-8 mb-3 px-4"
     >
       <h1 class="text-[#080808b3] font-semibold text-lg mb-4">Pay Bill</h1>
 
@@ -424,7 +428,7 @@
     <section
       style="display: none"
       id="transaction"
-      class="toggling max-w-lg mx-auto mt-8 px-4 pb-4"
+      class="toggling max-w-lg mx-auto mt-8 px-4 pb-3"
     >
       <!-- title section here -->
       <div class="flex justify-between items-center mb-4">
@@ -436,6 +440,101 @@
 
       <!-- card area -->
       <div id="transaction-container"></div>
+    </section>
+
+    <!-- input-06 Transaction form -->
+    <section
+      id="Latest-payments"
+      class="toggling max-w-lg mx-auto mt-8 px-4 pb-3"
+    >
+      <!-- title section here -->
+      <div class="flex justify-between items-center mb-4">
+        <h1 class="text-[#080808b3] font-semibold text-lg">Latest payment</h1>
+        <h3 class="text-[#08080880]">View All</h3>
+      </div>
+
+      <!-- card area -->
+      <div id="latest-container">
+        <!-- card-1 -->
+        <div
+          class="border border-[#fca6a61a] hover:scale-x-105 shadow-sm shadow-[#0808081A] flex justify-between items-center bg-white rounded-2xl py-4 px-5 mb-3"
+        >
+          <!-- left side  -->
+          <div class="flex items-center gap-3">
+            <figure class="bg-[#0808080d] p-2.5 rounded-full">
+              <img src="assets/purse1.png" alt="" />
+            </figure>
+            <div>
+              <h1 class="text-[#080808b3] font-semibold">Electricity Bill</h1>
+              <h3 class="text-[#080808b3] text-xs">Today 12:44 PM</h3>
+            </div>
+          </div>
+          <!-- right side -->
+          <span>
+            <i class="fa-solid fa-ellipsis-vertical text-xl"></i>
+          </span>
+        </div>
+
+        <!-- card-2 -->
+        <div
+          class="border border-[#fca6a61a] hover:scale-x-105 shadow-sm shadow-[#0808081A] flex justify-between items-center bg-white rounded-2xl py-4 px-5 mb-3"
+        >
+          <!-- left side  -->
+          <div class="flex items-center gap-3">
+            <figure class="bg-[#0808080d] p-2.5 rounded-full">
+              <img src="assets/purse1.png" alt="" />
+            </figure>
+            <div>
+              <h1 class="text-[#080808b3] font-semibold">Bank Deposit</h1>
+              <h3 class="text-[#080808b3] text-xs">Today 04:20 AM</h3>
+            </div>
+          </div>
+          <!-- right side -->
+          <span>
+            <i class="fa-solid fa-ellipsis-vertical text-xl"></i>
+          </span>
+        </div>
+
+        <!-- card-3 -->
+        <div
+          class="border border-[#fca6a61a] hover:scale-x-105 shadow-sm shadow-[#0808081A] flex justify-between items-center bg-white rounded-2xl py-4 px-5 mb-3"
+        >
+          <!-- left side  -->
+          <div class="flex items-center gap-3">
+            <figure class="bg-[#0808080d] p-2.5 rounded-full">
+              <img src="assets/purse1.png" alt="" />
+            </figure>
+            <div>
+              <h1 class="text-[#080808b3] font-semibold">Mobile Recharge</h1>
+              <h3 class="text-[#080808b3] text-xs">Today 05:15 AM</h3>
+            </div>
+          </div>
+          <!-- right side -->
+          <span>
+            <i class="fa-solid fa-ellipsis-vertical text-xl"></i>
+          </span>
+        </div>
+
+        <!-- card-4 -->
+        <div
+          class="border border-[#fca6a61a] hover:scale-x-105 shadow-sm shadow-[#0808081A] flex justify-between items-center bg-white rounded-2xl pt-4 pb-3 px-5 mb-3"
+        >
+          <!-- left side  -->
+          <div class="flex items-center gap-3">
+            <figure class="bg-[#0808080d] p-2.5 rounded-full">
+              <img src="assets/purse1.png" alt="" />
+            </figure>
+            <div>
+              <h1 class="text-[#080808b3] font-semibold">Gas Bill</h1>
+              <h3 class="text-[#080808b3] text-xs">Today 11:35 PM</h3>
+            </div>
+          </div>
+          <!-- right side -->
+          <span>
+            <i class="fa-solid fa-ellipsis-vertical text-xl"></i>
+          </span>
+        </div>
+      </div>
     </section>
 
     <script src="js/home.js"></script>
